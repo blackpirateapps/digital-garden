@@ -1,5 +1,0 @@
-1. [Darknet Diaries](https://feeds.megaphone.fm/darknetdiaries)
-2. [Not Related](https://notrelated.xyz/rss)
-3. [A.I Nation](https://feeds.podcastmirror.com/a-i-nation)
-4. [Lex Friedman Podcast](https://lexfridman.com/feed/podcast/)
-5. [Opt Out](https://feeds.buzzsprout.com/1790481.rss)
