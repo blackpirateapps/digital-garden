@@ -15,6 +15,9 @@ if [ "$token" ]; then
   # we want to change it to https://$token@github.com/blackpirateapps/shiny-robot.git
   sed -i "s|https://github.com/|https://$token@github.com/|g" .gitmodules
   
+  # update git config to use the new url
+  git submodule sync
+
   # init and update submodule
   git submodule update --init --recursive
   

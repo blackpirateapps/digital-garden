@@ -11,10 +11,10 @@ export function trace(msg: string, err: Error) {
   lines.push("")
   lines.push(
     "\n" +
-      styleText(["bgRed", "black", "bold"], " ERROR ") +
-      "\n\n" +
-      styleText("red", ` ${msg}`) +
-      (err.message.length > 0 ? `: ${err.message}` : ""),
+    styleText(["bgRed", "black", "bold"], " ERROR ") +
+    "\n\n" +
+    styleText("red", ` ${msg}`) +
+    (err.message.length > 0 ? `: ${err.message}` : ""),
   )
 
   let reachedEndOfLegibleTrace = false
@@ -32,12 +32,12 @@ export function trace(msg: string, err: Error) {
   }
 
   const traceMsg = lines.join("\n")
-  if (!isMainThread) {
-    // gather lines and throw
-    throw new Error(traceMsg)
-  } else {
-    // print and exit
-    console.error(traceMsg)
-    process.exit(1)
-  }
+  console.error(traceMsg)
+  // if (!isMainThread) {
+  //   // gather lines and throw
+  //   throw new Error(traceMsg)
+  // } else {
+  //   // print and exit
+  //   process.exit(1)
+  // }
 }
