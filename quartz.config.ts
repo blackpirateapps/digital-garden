@@ -73,7 +73,23 @@ const config: QuartzConfig = {
       Plugin.Description(),
       Plugin.Latex({ renderEngine: "katex" }),
     ],
-    filters: [Plugin.RemoveDrafts()],
+    filters: [
+      Plugin.RemoveDrafts(),
+      Plugin.ExplicitOrFolderAllowlist({
+        allow: [
+          "Newsletters",
+          "Newspaper",
+          "Readwise",
+          "Read Later",
+          "Study",
+          "Technology",
+          "Articles",
+          "Clippings",
+          "Books",
+          "competitive",
+        ],
+      }),
+    ],
     emitters: [
       Plugin.AliasRedirects(),
       Plugin.ComponentResources(),
