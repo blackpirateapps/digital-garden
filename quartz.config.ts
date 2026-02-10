@@ -87,6 +87,7 @@ const config: QuartzConfig = {
           "Clippings",
           "Books",
           "competitive",
+          "Blog-Writtings",
         ],
       }),
     ],
