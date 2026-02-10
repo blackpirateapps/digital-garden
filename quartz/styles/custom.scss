@@ -1,3 +1,18 @@
 @use "./base.scss";
 
-// put your custom CSS here!
+// Sakura Zen Custom Styling
+* {
+  transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+}
+
+body {
+  text-underline-offset: 0.15rem;
+}
+
+.card, .popover, code, pre {
+  border-radius: 8px;
+}
+
+li::marker {
+  color: var(--tertiary);
+}
